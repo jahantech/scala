@@ -9,7 +9,9 @@ object Main extends App {
   MultiplicationFactor.ByTen(100)
 
   MultiplicationFactor.JustLocal()
-  
+
+  println(AnotherObject.ObjectsElem)
+
   def BasicSum (a:Int, b:Int): Int ={
     return a+b
   }

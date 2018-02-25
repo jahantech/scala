@@ -1,0 +1,2 @@
+# scala
+Practice Scala code

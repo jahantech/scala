@@ -1,6 +1,8 @@
 import scala.io.Source
 
 object Main extends App {
+  val Timer = new FunctionTimers()
+  Timer.StartTimer()
   println("Scala Program")
   println(BasicSum(1,2))
   FileRead("/home/jahans/repos/scala/basic-functions/resources/test-read-file.txt")
@@ -11,7 +13,9 @@ object Main extends App {
   MultiplicationFactor.JustLocal()
 
   println(AnotherObject.ObjectsElem)
+  Timer.EndTimer()
 
+  Timer.GetTime()
   def BasicSum (a:Int, b:Int): Int ={
     return a+b
   }

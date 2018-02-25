@@ -12,7 +12,7 @@ class FunctionTimers() {
     }
 
     def GetTime(){
-        println(endTime - currentTime)
+        println((endTime - currentTime)/1000000000)
     }
 }
 

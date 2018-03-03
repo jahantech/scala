@@ -2,20 +2,26 @@ import scala.io.Source
 
 object Main extends App {
   val Timer = new FunctionTimers()
+  val CVC = new ClosedVarsClass()
   Timer.StartTimer()
   println("Scala Program")
+  CVC.GetPrivateVarVal()
   println(BasicSum(1,2))
   FileRead("/home/jahans/repos/scala/basic-functions/resources/test-read-file.txt")
   MultiplicationFactor.ByTwo(10)
-
+CVC.GetPrivateVarVal()
   MultiplicationFactor.ByTen(100)
-
+CVC.GetPrivateVarVal()
   MultiplicationFactor.JustLocal()
 
   println(AnotherObject.ObjectsElem)
   Timer.EndTimer()
 
+  val alphanum = new AlphaNumeric(3333)
+  println(alphanum.Test)
   Timer.GetTime()
+
+  CVC.GetPrivateVarVal()
   def BasicSum (a:Int, b:Int): Int ={
     return a+b
   }
@@ -46,3 +52,4 @@ object MultiplicationFactor {
   }
 }
 
+case class AlphaNumeric(Test:Int)
